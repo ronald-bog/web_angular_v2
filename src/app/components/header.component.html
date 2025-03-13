@@ -1,0 +1,50 @@
+<header>
+  <div class="logo"></div>
+
+  <nav>
+    <div [routerLinkActive]="'active'" class="link" routerLink="cursos">Cursos</div>
+    <div [routerLinkActive]="'active'" class="link" routerLink="tecnologia">Tecnología</div>
+    <div [routerLinkActive]="'active'" class="link" routerLink="ciencia">Ciencia</div>
+    <div [routerLinkActive]="'active'" class="link" routerLink="videos">Videos</div>
+    <div [routerLinkActive]="'active'" class="link" routerLink="demos">Demos</div>
+  </nav>
+
+  <div class="rrss">
+    <a class="youtube" href="https://www.youtube.com/@natsoftx" aria-label="Youtube" target="_blank"></a>
+    <a class="facebook" href="https://www.facebook.com/natsoftx" aria-label="Facebook" target="_blank"></a>
+    <a class="x" href="https://twitter.com/natsoftx" aria-label="Twitter X" target="_blank"></a>
+    <a class="instagram" href="https://www.instagram.com/natsoft/" aria-label="Instagram" target="_blank"></a>
+    <a class="threads" href="https://www.threads.net/@natsoft" aria-label="Threads" target="_blank"></a>
+  </div>
+  <div (click)="toggleMenu()" [ngClass]="{ 'abierto': isBurgerOpen }" class="burger">
+    <div class="barra superior"></div>
+    <div class="barra media"></div>
+    <div class="barra inferior"></div>
+  </div>
+  <div (click)="theme()" class="theme"></div>
+</header>
+
+<!-- burguer menu -->
+
+<div (click)="toggleMenu()" [ngClass]="{ 'abierto': isBurgerOpen }" class="burger">
+  <div class="barra superior"></div>
+  <div class="barra media"></div>
+  <div class="barra inferior"></div>
+</div>
+<menu [ngClass]="{ 'abierto': isMenuOpen }">
+  <nav>
+    <div (click)="theme()" class="theme-burguer"></div>
+
+    <hr>
+    <a [routerLinkActive]="'active'" routerLink="cursos" (click)="toggleMenu()">Cursos</a>
+    <hr>
+    <a [routerLinkActive]="'active'" routerLink="tecnologia" (click)="toggleMenu()">Tecnología</a>
+    <hr>
+    <a [routerLinkActive]="'active'" routerLink="ciencia" (click)="toggleMenu()">Ciencia</a>
+    <hr>
+    <a [routerLinkActive]="'active'" routerLink="videos" (click)="toggleMenu()">Videos</a>
+    <hr>
+    <a [routerLinkActive]="'active'" routerLink="demos" (click)="toggleMenu()">Demos</a>
+    <hr>
+  </nav>
+</menu>

@@ -1,0 +1,215 @@
+header {
+  display: flex;
+  height: 3.5em;
+  padding: 0 .5em;
+  border-bottom: 1px solid $grey;
+
+  @include m1366 {
+    height: 4em;
+    padding: 0 6em;
+    justify-content: space-between;
+  }
+
+  @include m1920{
+    padding: 0 12em;
+  }
+
+  .logo {
+    background-image: url('#{$logo}');
+    background-size: 8em;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 41%;
+
+    @include m1366 {
+      background-size: 12em;
+      width: 25%;
+    }
+  }
+
+  nav {
+    display: none;
+
+    @include m1366 {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .link {
+        font-size: 1.2em;
+        font-weight: bolder;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 2px solid $black;
+        }
+      }
+      .active {
+        display: flex;
+        height: 3.3em;
+        align-items: center;
+        border-radius: 0.5em 0.5em 0 0;
+        padding: 0 .5em;
+        color: $white;
+        background-color: $footer;
+      }
+    }
+  }
+
+  .social-icon {
+    width: 20%;
+    background: center center;
+    background-repeat: no-repeat;
+    background-size: 1.2em;
+  }
+
+  .rrss {
+    width: 47%;
+    display: flex;
+    justify-content: center;
+
+    @include m1366 {
+      width: 20%;
+      display: flex;
+    }
+
+    .youtube {
+      @extend .social-icon;
+      background-image: url('#{$youtube}');
+    }
+
+    .facebook {
+      @extend .social-icon;
+      background-image: url('#{$facebook}');
+    }
+
+    .x {
+      @extend .social-icon;
+      background-image: url('#{$x}');
+    }
+
+    .instagram {
+      @extend .social-icon;
+      background-image: url('#{$instagram}');
+    }
+
+    .threads {
+      display: none;
+      @include m720{
+        display: flex;
+        width: 20%;
+        background: center center;
+        background-repeat: no-repeat;
+        background-size: 1.2em;
+        background-image: url('#{$threads}');
+      }
+    }
+  }
+
+  .theme {
+    display: none;
+
+    @include m1366 {
+      width: 5%;
+      display: flex;
+      cursor: pointer;
+      background: center right;
+      background-repeat: no-repeat;
+      background-size: 1.2em;
+      background-image: url('#{$moon}');
+    }
+  }
+
+  /* Botón burger */
+  .burger {
+    width: 12%;
+    padding-top: .5em;
+    cursor: pointer;
+
+    @include m720 {
+      padding-left: 2.2em;
+    }
+
+    @include m1366 {
+      display: none;
+    }
+
+    .barra {
+      width: 35px;
+      height: 2px;
+      margin: 8px;
+      background-color: $grey;
+      transition: 200ms all ease-in-out;
+    }
+
+    &.abierto {
+      .barra {
+        background-color: $grey;
+
+        &.superior {
+          transform: translateY(10px) rotateZ(-45deg);
+        }
+
+        &.media {
+          width: 0;
+        }
+
+        &.inferior {
+          transform: translateY(-10px) rotateZ(45deg);
+        }
+      }
+    }
+  }
+}
+
+/* Menú lateral */
+menu {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background-color: $black;
+  position: fixed;
+  left: 250em;
+  transition: all 100ms ease-in-out;
+  z-index: 998;
+
+  &.abierto {
+    left: 0;
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+    .theme-burguer {
+      width: 100vw;
+      height: 8em;
+      background-image: url('#{$moonB}');
+      background-repeat: no-repeat;
+      background-size: 1.5em;
+      background-position: center;
+    }
+
+    a {
+      display: flex;
+      padding: 1em 0;
+      color: $white;
+      font-size: 1.1em;
+      transition: 300ms all ease-in-out;
+      text-decoration: none;
+      justify-content: center;
+
+      &.active {
+        color: $black;
+        background-color: $titleNews;
+      }
+    }
+
+    hr {
+      width: 100%;
+      border-color: $grey;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<div class="curso">
+  <div class="card-img500">
+    <img ngSrc="../../../assets/cursos/{{list[item].language}}.svg" width="50" height="50" priority
+      alt="Cursos de programación">
+  </div>
+  <div class="card">
+    <h2>
+      ¿Qué es {{list[item].title}}?
+    </h2>
+    <p>
+      {{list[item].que_es}}
+    </p>
+    <h2>
+      ¿Por qué aprender {{list[item].title}}?
+    </h2>
+    <p>
+      {{list[item].por_que}}
+    </p>
+  </div>
+  <div class="card-img">
+    <img ngSrc="../../../assets/cursos/{{list[item].language}}.svg" width="328.5" height="400" priority=true
+      alt="Cursos de programación">
+  </div>
+  <div class="card-2">
+    <div class="contenido">
+      <h2>Que aprenderás en este curso:</h2>
+      <p>
+        <div *ngFor="let i of list[item].temas">
+          <li>⭐ {{i}}</li>
+        </div>
+    </div>
+  </div>
+  <div class="card-3">
+    <div class="contenido">
+      <h2>Metodología:</h2>
+      <p>
+        <li>✅ Clases en vivo online e interactivas.</li>
+        <li>✅ Clases personalizadas.</li>
+        <li>✅ Flexibilidad.</li>
+        <li>✅ Sin tanto tecnicismo.</li>
+        <li>✅ Prácticas constantes.</li>
+        <li>✅ Ayuda permanente.</li>
+        <li>✅ Trato ameno y cordial.</li>
+        <br>
+        <br>
+      </p>
+      <h2>👍 COMIENZA HOY MISMO 💻</h2>
+      <button routerLink="/contacto">CONTACTAME</button>
+    </div>
+  </div>
+</div>

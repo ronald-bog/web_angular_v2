@@ -1,0 +1,26 @@
+.code {
+  padding: .5em .5em 17em;
+  font-size: .8em;
+
+  @include m1366 {
+    padding: 1em 9em 17em;
+    font-size: 1em;
+  }
+  @include m1920 {
+    padding: 1em 18em 17em;
+    font-size: 1em;
+  }
+
+  .language-html {
+    padding: 0 .5em;
+    @include m1366{
+      padding: 0 2em;
+    }
+  }
+  .language-css {
+    padding: 0 .5em;
+    @include m1366{
+      padding: 0 2em;
+    }
+  }
+}

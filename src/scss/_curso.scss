@@ -1,0 +1,101 @@
+.curso {
+  padding: .5em .5em 14.5em .5em;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include m1366 {
+    padding: 1em 6em 14.5em;
+  }
+
+  @include m1920 {
+    padding: 3em 20em 14.5em;
+  }
+
+  .card-img500 {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include m1366 {
+      display: none;
+    }
+  }
+
+  h2 {
+    margin-bottom: .5em;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  button {
+    background-color: #18B331;
+    border: 0;
+    color: $white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #18b3329a;
+    }
+  }
+
+  .card {
+    @include m1366 {
+      width: 580px;
+      height: 350px;
+      border-radius: 15px 15px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 1em;
+      box-shadow: 10px 10px 10px $shadow;
+    }
+
+  }
+
+  .card-img {
+    display: none;
+
+    @include m1366 {
+      margin-bottom: 30px;
+      margin-left: 17px;
+      width: 540px;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .card-2 {
+    @include m1366 {
+      width: 580px;
+      height: 350px;
+      border-radius: 15px 15px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 1em;
+
+    }
+  }
+  .card-3 .contenido {
+    @include m1366 {
+      width: 580px;
+      height: 350px;
+      border-radius: 15px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 1em;
+      h2{
+        padding-bottom: 1em;
+      }
+    }
+  }
+}

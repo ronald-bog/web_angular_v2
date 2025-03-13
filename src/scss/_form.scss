@@ -1,0 +1,114 @@
+.encabezado-contact {
+  padding: .5em;
+  @include m1366{
+    padding: 1em 6em 0 6em;
+  }
+  @include m1920{
+    padding: 3em 24em 0;
+  }
+}
+
+.form-contact {
+  padding: 0 .5em 12em .5em;
+  @include m1366{
+    padding: 1em 30em 12em;
+  }
+
+  @include m1920{
+    padding: 1em 45em 12em;
+  }
+
+  .fila {
+    padding: 2em 0 0 0;
+    display: flex;
+    justify-content: center;
+
+    input,
+    select {
+      width: 80%;
+      border: none;
+      font-size: 1em;
+      padding: 0.3em 0;
+      border-bottom: 1.5px solid $black;
+
+      &:focus {
+        outline: none;
+        border-bottom: 1.5px solid $blue;
+      }
+    }
+
+    textarea {
+      width: 80%;
+      font-size: 1em;
+      border: 1.5px solid $black;
+      border-radius: 10px;
+
+      &:focus {
+        outline: none;
+        border: 1.5px solid $blue;
+      }
+    }
+
+    input,
+    select {
+      &.name {
+        background-image: url('#{$name}');
+      }
+
+      &.last {
+        background-image: url('#{$last}');
+      }
+
+      &.asunto {
+        background-image: url('#{$list}');
+      }
+
+      &.email {
+        background-image: url('#{$mail}');
+      }
+    }
+
+    input,
+    select {
+
+      &.name,
+      &.last,
+      &.email,
+      &.asunto {
+        background-size: 1em;
+        background-repeat: no-repeat;
+        background-position: .4em .4em;
+        padding-left: 2em;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: $blue;
+      color: $white;
+      font-size: 1em;
+      padding: 0.5em 1em;
+      border-radius: 0.3em;
+      cursor: pointer;
+      transition: all ease-in-out 400ms;
+
+      &:hover {
+        background-color: $buttonHov;
+      }
+
+      &:disabled {
+        background-color: $buttonDis;
+      }
+    }
+  }
+
+  .alertVal {
+    background-image: url('#{$exclamation}');
+    background-size: .8em;
+    background-repeat: no-repeat;
+    background-position: 5em .2em;
+    padding: 0 0 0 6em;
+    font-size: .8em;
+    color: red;
+  }
+}

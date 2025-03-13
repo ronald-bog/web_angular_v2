@@ -1,0 +1,30 @@
+.demos {
+  padding: .5em .5em 25em;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  @include m1366 {
+    padding: 1em 6em 14em;
+  }
+  @include m1920 {
+    padding: 3em 12em 14em;
+  }
+
+  .text {
+    margin-bottom: 1.5em;
+
+    a {
+      text-decoration: none;
+      color: $black;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .preview {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+}

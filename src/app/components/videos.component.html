@@ -1,0 +1,7 @@
+<div class="videos">
+  <div *ngFor="let i of videos" class="video">
+    <a href="https://youtu.be/{{i.name}}" target="_blank">
+      <img [ngSrc]="i.name + '.webp'" width="640" height="360" priority={{i.priority}} alt="Cursos de programación y desarrollo de software">
+    </a>
+  </div>
+</div>

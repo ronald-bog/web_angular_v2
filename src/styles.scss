@@ -1,0 +1,182 @@
+$grey: #666666;
+$blue: #2578FE;
+$white: white;
+$black: #1C1E21;
+$titleNews: #a09e9e;
+$shadow: #a09e9e68;
+$buttonDis: #cccccc;
+$buttonHov: #5d9bff;
+$footer: #252a2c;
+$logo: '/assets/logos/logo.svg';
+$logoD: '/assets/logos/logo_dark.svg';
+$youtube: '/assets/rrss/youtube.svg';
+$facebook: '/assets/rrss/facebook.svg';
+$x: '/assets/rrss/x.svg';
+$xd: '/assets/rrss/xd.svg';
+$instagram: '/assets/rrss/instagram.svg';
+$threads: '/assets/rrss/threads.svg';
+$threadsD: '/assets/rrss/threadsD.svg';
+$sun: '/assets/logos/sun.svg';
+$moon: '/assets/logos/moon.svg';
+$moonB: '/assets/logos/moonB.svg';
+$up: '/assets/logos/up.svg';
+$name: '/assets/form/name.svg';
+$last: '/assets/form/last.svg';
+$mail: '/assets/form/mail.svg';
+$list: '/assets/form/list.svg';
+$exclamation: '/assets/form/exclamation.svg';
+
+@mixin m1920 {
+  @media (min-width: 1800px) {
+    @content
+  }
+}
+
+;
+
+@mixin m1366 {
+  @media (min-width: 1360px) {
+    @content
+  }
+}
+
+;
+
+@mixin m720 {
+  @media (min-width: 720px) {
+    @content
+  }
+}
+
+;
+
+@font-face {
+  font-family: "Roboto";
+  src: url('../src/assets/Roboto-Light.ttf');
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: rgb(245, 245, 245);
+
+}
+
+.dark {
+  background-color: $black;
+  color: $white;
+
+  .demos .text a {
+    color: $white;
+  }
+
+  footer {
+    background-color: $footer;
+
+    .social,
+    .contact,
+    .rights,
+    .logoFooter {
+      background-color: $footer;
+
+      a,
+      img {
+        background-color: $footer;
+      }
+    }
+  }
+
+  header {
+    .logo {
+      background-image: url('#{$logoD}');
+    }
+
+    nav {
+      .link {
+        &:hover {
+          border-bottom: 2px solid $white;
+        }
+      }
+    }
+
+    .rrss {
+      .x {
+        background-image: url('#{$xd}');
+      }
+
+      .threads {
+        background-image: url('#{$threadsD}');
+      }
+    }
+
+    .theme {
+      background-image: url('#{$sun}');
+      background-size: 2em;
+    }
+  }
+  .news {
+    .card{
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  menu {
+    nav {
+      .theme-burguer {
+        background-image: url('#{$sun}');
+        background-size: 2.6em;
+      }
+    }
+  }
+
+  .form-contact {
+    .fila {
+
+      input,
+      select {
+        border-bottom: 1.5px solid $white;
+      }
+
+      textarea {
+        border: 1.5px solid $white;
+      }
+    }
+  }
+}
+
+.buttonUP {
+  position: fixed;
+  bottom: 10em;
+  left: 50%;
+  width: 60px;
+  margin-left: -30px;
+  z-index: 999;
+  cursor: pointer;
+
+  &:hover {
+    filter: opacity(0.8);
+  }
+}
+
+@import 'scss/header';
+@import 'scss/news';
+@import 'scss/videos';
+@import 'scss/demos';
+@import 'scss/cursos';
+@import 'scss/curso';
+@import 'scss/footer';
+@import 'scss/form';
+@import 'scss/code';

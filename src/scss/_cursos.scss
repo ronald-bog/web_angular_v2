@@ -1,0 +1,82 @@
+.cursos {
+  padding: .5em .5em 14.5em .5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+
+  @include m1366 {
+    padding: 1em 6em 14.5em 6em;
+    justify-content: space-between;
+  }
+
+  @include m1920 {
+    padding: 3em 12em 14.5em;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 580px;
+    height: 500px;
+    box-shadow: 5px 5px 5px $shadow;
+    border-radius: 15px;
+
+    @include m1366 {
+      display: flex;
+      max-width: 550px;
+      height: 420px;
+
+      .contenido {
+        padding: 0 .5em;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around ;
+        border-radius: 15px;
+      }
+    }
+
+    @include m1920 {
+      max-width: 730px;
+      height: 400px;
+
+      .contenido {
+        padding: 0 .5em 2em;
+        justify-content:space-between ;
+      }
+    }
+
+    img {
+      height: 30%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+
+      @include m1366 {
+        height: 100%;
+        width: 45%;
+        border-radius: 15px 0 0 15px;
+      }
+    }
+
+    h2 {
+      margin-bottom: .3em;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+      padding-right: .5em;
+    }
+
+    button {
+      background-color: $blue;
+      border: 0;
+      color: $white;
+      border-radius: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $buttonHov;
+      }
+    }
+  }
+}
